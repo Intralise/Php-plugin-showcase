@@ -26,6 +26,9 @@ add_action('wp_enqueue_scripts', 'new_alpha_logic_response_load');
 //*******//
 
 //Здесь мы говорим php что его могут вызвать из js кода
+//Фактически после add_action внешние js файлы напрямую могут обратиться к бэку
+//Поэтому важно добавлять префиксы к названию метода, чтобы php код не обратился к ф-ции check_order_status другого плагина
+//paymtech здесь это название платёжной системы, у вас будет другой префикс
 add_action('wp_ajax_nopriv_paymtech_check_order_status', 'paymtech_check_order_status');
 add_action('wp_ajax_paymtech_check_order_status', 'paymtech_check_order_status');
 
