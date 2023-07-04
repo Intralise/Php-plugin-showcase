@@ -1,5 +1,6 @@
 (function ($) {
     $(document).ready(function ($) {
+	//Функция срабатывает если человек кликнул на кнопку с таким id
       $("#gateway_button").click(function (e) {
         e.preventDefault();
 	
