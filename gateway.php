@@ -35,6 +35,8 @@ add_action('wp_ajax_paymtech_check_order_status', 'paymtech_check_order_status')
 function paymtech_check_order_status( ) {
 
 	//тут внутри что-то происходит
+	//Если с frontend'a передали какую-либо переменную, то её можно извлечь следующим образом
+	//$myText = $_POST['myText'];
 }
 
 
